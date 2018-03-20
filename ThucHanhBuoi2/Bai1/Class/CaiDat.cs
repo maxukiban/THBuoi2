@@ -1,0 +1,39 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Net.Sockets;
+
+namespace Bai1.Class
+{
+    class CaiDat
+    {
+        public enum Modes { Client, Server }
+        /// <summary>
+        /// Chế độ đang chạy Client / Server
+        /// </summary>
+        public static Modes Mode { get; set; }
+        /// <summary>
+        /// Cài đặt cổng mặc định
+        /// </summary>
+        public static int Port { get; set; }
+        /// <summary>
+        /// Địa chỉ Server, dùng khi chế độ là client
+        /// </summary>
+        public static string Server { get; set; }
+        /// <summary>
+        /// Check tình trạng của server
+        /// </summary>
+        /// 
+        public static bool CheckTinhTrang { get; set; }
+        /// <summary>
+        /// Tcp client của server
+        /// </summary>
+        /// 
+        public static TcpClient TcpServer { get; set; }
+        /// <summary>
+        /// Chuỗi bắt đầu khi muốn gửi 1 file
+        /// </summary>
+        public static string MarkSendFile { get; set; }
+    }
+}
